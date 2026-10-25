@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MT | Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a web developer building fast, accessible websites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo">MT<span>.</span></a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-menu" class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="btn btn-small">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-inner left">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>MD TAwhid<br /><span class="gradient-text">Web Developer</span></h1>
+        <p class="lead">I design and build fast, accessible and beautiful websites and web apps that people enjoy using.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn">View my work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="./image/pic.png" alt="">
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="avatar" role="img" aria-label="Portrait placeholder">
+          <img src="./image/pic.png" alt="">
+        </div>
+        <div>
+          <h2>About Me</h2>
+          <p>I'm a developer who loves turning ideas into polished products. I care about clean code, thoughtful design and performance.</p>
+          <p>When I'm not coding, I'm exploring new tools, contributing to open source, and learning something new every week.</p>
+          <ul class="stats">
+            <li><strong>3+</strong><span>Years experience</span></li>
+            <li><strong>25+</strong><span>Projects built</span></li>
+            <li><strong>10+</strong><span>Happy clients</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="section-sub">Technologies I use to bring products to life.</p>
+        <ul class="skills-grid">
+          <li class="card skill"><span class="icon" aria-hidden="true">&lt;/&gt;</span><h3>HTML5</h3><p>Semantic, accessible markup</p></li>
+          <li class="card skill"><span class="icon" aria-hidden="true">#</span><h3>CSS3</h3><p>Grid, Flexbox, animations</p></li>
+          <li class="card skill"><span class="icon" aria-hidden="true">JS</span><h3>JavaScript</h3><p>ES6+, DOM, APIs</p></li>
+          <li class="card skill"><span class="icon" aria-hidden="true">⚛</span><h3>React</h3><p>Components and hooks</p></li>
+          <li class="card skill"><span class="icon" aria-hidden="true">N</span><h3>Node.js</h3><p>REST APIs and tooling</p></li>
+          <li class="card skill"><span class="icon" aria-hidden="true">Git</span><h3>Git &amp; GitHub</h3><p>Workflow and CI/CD</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <p class="section-sub">Click a project to see more details.</p>
+        <div class="projects-grid">
+          <article class="card project">
+            <div class="thumb t1" aria-hidden="true">
+              <img src="./image/task-flow2.png" alt="">
+            </div>
+            <h3>TaskFlow</h3>
+            <p>A kanban-style task manager with drag and drop.</p>
+            <button class="btn btn-small open-modal" data-project="taskflow">View details</button>
+          </article>
+          <article class="card project">
+            <div class="thumb t2" aria-hidden="true">
+              <img src="./image/weather.png" alt="">
+
+            </div>
+            <h3>WeatherNow</h3>
+            <p>Live weather dashboard powered by a public API.</p>
+            <button class="btn btn-small open-modal" data-project="weathernow">View details</button>
+          </article>
+          <article class="card project">
+            <div class="thumb t3" aria-hidden="true">
+              <img src="./image/ecommerce.png" alt="">
+            </div>
+            <h3>ShopEase</h3>
+            <p>Responsive e-commerce storefront with a cart.</p>
+            <button class="btn btn-small open-modal" data-project="shopease">View details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-wrap">
+        <h2>Contact</h2>
+        <p class="section-sub">Have a project in mind? Let's talk.</p>
+        <form class="contact-form" id="contact-form" action="mailto:you@example.com" method="post" enctype="text/plain">
+          <label>Name <input type="text" name="name" required /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Message <textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> MD Tawhid. All rights reserved.</p>
+      <ul class="socials">
+        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close dialog" data-close>&times;</button>
+      <div class="modal-thumb" id="modal-thumb"></div>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <ul class="tags" id="modal-tags"></ul>
+      <div class="modal-actions">
+        <a href="#" id="modal-live" class="btn btn-small" target="_blank" rel="noopener">Live demo</a>
+        <a href="#" id="modal-code" class="btn btn-small btn-outline" target="_blank" rel="noopener">Source code</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
